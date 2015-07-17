@@ -11,5 +11,9 @@
     "node_modules",
     "bower_components",
     "test"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "https://github.com/twbs/bootstrap.git",
+    "requirejs": "https://github.com/jrburke/requirejs.git"
+  }
 }
