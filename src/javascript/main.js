@@ -1,3 +1,9 @@
-define(['jquery', 'javascript/dependent'], function ($, dependent) {
+requirejs.config({
+    paths: {
+        jquery: '/third-party/jQuery/dist/jquery'
+    }
+});
+
+define(['jquery', './dependent'], function ($, dependent) {
     $('body').append('<p>' + dependent.getMessage() + '</p>');
 });
