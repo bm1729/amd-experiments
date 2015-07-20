@@ -19,6 +19,7 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true,
         globals: {
+          'sinon': true,
           'define': true,
           'require': true,
           'requirejs': true,
