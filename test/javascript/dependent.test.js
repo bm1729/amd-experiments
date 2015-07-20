@@ -1,4 +1,4 @@
-define(['src/javascript/dependent', 'src/javascript/independent'], function(dependent, independent) {
+define(['dependent', 'independent'], function(dependent, independent) {
     describe('dependent', function() {
 
         it('getMessage', function() {
