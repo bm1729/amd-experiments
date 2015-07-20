@@ -1,12 +1,8 @@
-define([], function() {
-    describe('just checking', function() {
+define(['src/javascript/independent'], function(independent) {
+    describe('independent', function() {
 
-        it('working test', function() {
-            expect(true).toEqual(true);
-        });
-
-        it('failing test', function() {
-            expect(true).toEqual(false);
+        it('getSubject', function() {
+            expect(independent.getSubject()).toEqual('Ben');
         });
 
     });
