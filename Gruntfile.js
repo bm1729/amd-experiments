@@ -20,7 +20,11 @@ module.exports = function(grunt) {
         browser: true,
         globals: {
           'define': true,
-          'requirejs': true
+          'require': true,
+          'requirejs': true,
+          'describe': true,
+          'it': true,
+          'expect': true
         }
       },
       gruntfile: {
@@ -28,6 +32,14 @@ module.exports = function(grunt) {
       },
       lib_test: {
         src: ['src/**/*.js', 'test/**/*.js']
+      }
+    },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        options: {
+          singleRun: true
+        }
       }
     },
     watch: {
@@ -51,9 +63,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-execute');
+  grunt.loadNpmTasks('grunt-karma');
 
   // Default task.
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'karma']);
   grunt.registerTask('start', ['execute']);
 
 };
