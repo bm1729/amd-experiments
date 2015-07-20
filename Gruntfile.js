@@ -18,7 +18,10 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
-        globals: {}
+        globals: {
+          'define': true,
+          'requirejs': true
+        }
       },
       gruntfile: {
         src: 'Gruntfile.js'
