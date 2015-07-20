@@ -13,7 +13,7 @@
     "test"
   ],
   "dependencies": {
-    "bootstrap": "https://github.com/twbs/bootstrap.git",
-    "requirejs": "https://github.com/jrburke/requirejs.git"
+    "requirejs": "https://github.com/jrburke/requirejs.git",
+    "jQuery": "~2.1.4"
   }
 }
