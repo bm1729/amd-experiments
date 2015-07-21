@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         noarg: true,
         sub: true,
         undef: true,
-        unused: true,
+        unused: false,
         boss: true,
         eqnull: true,
         browser: true,
@@ -25,7 +25,9 @@ module.exports = function(grunt) {
           'requirejs': true,
           'describe': true,
           'it': true,
-          'expect': true
+          'expect': true,
+          'beforeEach': true,
+          'afterEach': true
         }
       },
       gruntfile: {

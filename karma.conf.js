@@ -17,7 +17,8 @@ module.exports = function(config) {
     files: [
       'test/test-main.js',
       {pattern: 'src/javascript/**/*.js', included: false},
-      {pattern: 'test/javascript/**/*.js', included: false}
+      {pattern: 'test/javascript/**/*.js', included: false},
+      {pattern: 'node_modules/squirejs/src/Squire.js', included: false}
     ],
 
 
