@@ -16,7 +16,9 @@ define(['d3'], function(d3) {
         }
         
         my.textColor = function(value) {
-            if (!arguments.length) return textColor;
+            if (!arguments.length) {
+                return textColor;
+            }
             textColor = value;
             return my;
         };

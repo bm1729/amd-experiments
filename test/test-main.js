@@ -14,7 +14,11 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
-  baseUrl: '/base'
+  baseUrl: '/base',
+  
+  paths: {
+    d3: 'bower_components/d3/d3'
+  }
 });
 
 require(allTestFiles, function () {
