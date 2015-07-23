@@ -30,7 +30,7 @@ define(['src/javascript/todo/table', 'd3'], function(table, d3) {
 
         it('setter updates the color', function() {
             testTable.textColor('blue');
-            expect(testTable.textColor()).toEqual('bluey');
+            expect(testTable.textColor()).toEqual('blue');
         });
     });
 
