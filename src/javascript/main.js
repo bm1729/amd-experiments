@@ -5,7 +5,6 @@ requirejs.config({
     }
 });
 
-define(['d3', 'todo/table'], function (d3, table) {
-    var myTable = table().textColor('blue');
-    d3.select('body').datum(['Hello', 'Matt', 'How', 'Are', 'You?']).call(myTable);
+define(['todo/todo'], function (todo) {
+    todo();
 });
