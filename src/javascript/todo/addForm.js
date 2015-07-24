@@ -14,13 +14,11 @@ define(['d3'], function(d3) {
                 form.exit().remove();
                 
                 form.call(function(sel) {
-                    sel.select('input').property('value', function(d) { return d.text; })
-                        .on('change', function (d) { 
-                            d.text = this.value;
-                        });
-                    sel.select('button').on('click', function() { 
-                            dispatcher.add();
-                        });
+                    sel.select('input')
+                        .property('value', function(d) { return d.text; })
+                        .on('change', function (d) { d.text = this.value; });
+                    sel.select('button')
+                        .on('click', function() { dispatcher.add(); });
                 });
             });
         }
