@@ -11,11 +11,9 @@ define(['d3'], function(d3) {
                 
                 row.enter().append('p');
                 row.exit().remove();
-                row.text(function(d) { return d; })
+                row.text(function(d) { return d.text; })
                     .style('color', textColor)
-                    .on('click', function(datum, index) {
-                        dispatcher.remove(index);
-                    });
+                    .on('click', function(datum, index) { dispatcher.remove(index); });
             });
         }
         
