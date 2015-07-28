@@ -5,6 +5,6 @@ requirejs.config({
     }
 });
 
-define(['todo/todo'], function (todo) {
+require(['todo/todo'], function (todo) {
     todo();
 });
