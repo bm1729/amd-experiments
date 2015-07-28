@@ -1,10 +1,20 @@
 define(['src/javascript/dependent', 'src/javascript/independent'], function(dependent, independent) {
+    
+    var sandbox;
+    
+    beforeEach(function() {
+        sandbox = sinon.sandbox.create();
+    });
+    
+    afterEach(function() {
+        sandbox.restore();
+    });
+    
     describe('dependent', function() {
 
         it('getMessage with stub', function() {
-            sinon.stub(independent, 'getSubject').returns('Matt');
+            sandbox.stub(independent, 'getSubject').returns('Matt');
             expect(dependent.getMessage()).toEqual('Hello Matt!');
-            independent.getSubject.restore();
         });
 
         it('getMessage without stub', function() {
